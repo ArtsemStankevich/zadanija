@@ -1,6 +1,8 @@
 //Вычислить н чисел Фибоначчи, использовать массив для хранения уже вычесленных значений. 
 #include <stdio.h>
+
 int Fib(int n);
+
 int main()
 {
 	int tab[10];
@@ -16,14 +18,9 @@ int main()
 		tab[liczba] = Fib(liczba);
 		printf("%d\n", tab[liczba]);
 		scanf("%d", &stop);
-		
-	
-	
-	
 	}
 	for(int i=0; i<10; i++)
 		printf("%d\n", tab[i]);
-	
 }
 
 int Fib(int n)
@@ -33,6 +30,4 @@ int Fib(int n)
 	if(n==1)
 		return 1;
 	return Fib(n-1)+Fib(n-2);
-	
-	
 }

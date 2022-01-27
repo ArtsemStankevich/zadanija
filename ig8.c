@@ -5,16 +5,17 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#define ARRAY 6
 
 int main()
 {
-	char skobki[6][2];
-	strcpy(skobki[0], "(");
-	strcpy(skobki[1], ")");
-	strcpy(skobki[2], "(");
-	strcpy(skobki[3], ")");
-	strcpy(skobki[4], "(");
-	strcpy(skobki[5], ")");
+	char skobki[ARRAY][2];
+	for(int i=0; i<ARRAY; i++)
+	{
+		char arr[2];
+		scanf("%s", arr);
+		strcpy(skobki[i], arr);
+	}
 	char skobka1[2] = "(";
 	char skobka2[2] = ")";
 	bool answ = true;
@@ -25,7 +26,7 @@ int main()
 	{
 		if(strcmp(skobki[0], skobka1)==1 && strcmp(skobki[0], skobka2)==1)
 			answ = false;
-		for(int i=0; i<=5; i++)
+		for(int i=0; i<6; i++)
 		{
 			if(strcmp(skobki[i], skobka1)==0)
 			{
@@ -34,7 +35,6 @@ int main()
 			}
 			else if(strcmp(skobki[i], skobka2)==0)
 			{
-			
 				strcpy(skobki[i], "a");
 				ex2+=1;
 			}
@@ -44,17 +44,10 @@ int main()
 		if(strcmp(skobki[5], skobka1)==1 && strcmp(skobki[5], skobka2)==1)
 			answ = false;
 	}
+	printf("%d", ex1);
 	if(ex1 == ex2 && answ == true)
 		printf("TAK");
 	else 
 		printf("NIE");
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
