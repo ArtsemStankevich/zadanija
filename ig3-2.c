@@ -12,15 +12,7 @@ int main()
 			tab[i]=-1;
 		else if(tab[i]=0)
 			tab[i]=0;
-		
 	}
 	for(int i=0; i<10; i++)
 		printf("%d\n", tab[i]);
-	
-	
-	
-	
-	
-	
-	
 }

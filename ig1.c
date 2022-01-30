@@ -37,28 +37,17 @@ int main()
 				submin = min;
 				min = tab[i];
 			}
-		}
-			
+		}	
 		if(tab[i]<maks && tab[i]>submaks)
 			submaks = tab[i];
 		if(tab[i]<maks && tab[i] < submaks && tab[i] > subsubmaks)
 			subsubmaks = tab[i];
 		if(tab[i]>min && tab[i]<submin)
 			submin = tab[i];
-		
-		
 	}
 	printf("%d", min);
 	printf("%d", submin);
 	printf("%d", subsubmaks);
 	printf("%d", submaks);
 	printf("%d", maks);
-
-	
-
-	
-	
-	
-	
-	
 }

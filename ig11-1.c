@@ -1,50 +1,42 @@
 //Отсортируй массив по убыванию любимым методом, оцени сложность алгоритма
 #include <stdio.h>
-#include <limits.h>
 
 int main()
 {
-	
-	int main_array;
-	int min=INT_MAX;
-	scanf("%d", &main_array);
-	int tab[main_array];
-	int sorttab[main_array];
-	int sort_array = main_array;
-	int ex = 0;
-	for(int i=0; i<=main_array; i++)
+	int A;
+	scanf("%d", &A);
+	int tab[A];
+	for(int i = 0; i<A; i++)
 	{
-		int op;
-		scanf("%d", &op);
-		tab[i] = op;	
+		int B;
+		scanf("%d", &B);
+		tab[i] = B;
+		
 	}
-	for(int j=main_array; j>=0; j--)
+	int ex=0;
+	while(ex!=A)
 	{
-		min = INT_MAX;
-		for(int i=0; i<=sort_array; i++)
+		for(int i=0; i<A-1; i++)
+		{
+			if(tab[i]<tab[i+1])
 			{
-				if(tab[i]<min)
-				{
-					min = tab[i];
-					ex = i;
-				}
+				int C = tab[i+1];
+				tab[i+1] = tab[i];
+				tab[i] = C;
+			
 			}
-		sorttab[j] = min;
-		for(int i = ex; i<=sort_array; i++)
-			tab[i] = tab[i+1];
-		sort_array--;
-	}	
-	for(int i=0; i<=main_array; i++)
-	{
-			printf("%d", sorttab[i]);
+		}
+		ex++;
 	}
-//sloznosc=n^2 + 2n	
-	
-	
-	
-	
-	
-	
-	
-	
+	for(int i=0; i<A; i++)
+		printf("%d", tab[i]);
 }
+//sloznosc=n^2
+	
+	
+	
+	
+	
+	
+	
+	
